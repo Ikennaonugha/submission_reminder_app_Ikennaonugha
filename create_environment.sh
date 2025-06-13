@@ -18,11 +18,11 @@ if [[ -d "$new_directory" ]] ; then
 	echo "Warning: Directory '$new_directory' already exists"
 	echo "All contents will be overwriten if continued"
 	read -p "Do you wish to continue? (Yes/No): " overwrite
-	if [[ "$overwrite" == "YES" ]]; then
+	if [[ "$overwrite" == "Yes" ]]; then
 		rm -rf "$PWD/${new_directory}"
 	fi
 	echo "Exiting...."
-	exit 0
+	exit 1
 fi
 
 mkdir -p "${new_directory}"
